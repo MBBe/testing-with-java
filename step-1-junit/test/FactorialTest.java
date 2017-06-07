@@ -6,9 +6,10 @@ public class FactorialTest {
     private Factorial factorial;
 
     @Before
-    public void setUp(){
-        factorial = new Factorial ();
+    public void setUp() {
+        factorial = new Factorial();
     }
+
     @Test
     public void calculate_0() {
         Factorial factorial = new Factorial();
@@ -27,4 +28,13 @@ public class FactorialTest {
 
         assertEquals(expectedResult, factorial.calculate(testStartValue));
     }
+
+    @Test
+    public void calculate_5() {
+        int testStartValue = 5;
+        int expectedResult = 120;
+
+        assertEquals(expectedResult, factorial.calculate(testStartValue));
+    }
+
 }
